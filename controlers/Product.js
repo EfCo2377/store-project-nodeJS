@@ -9,7 +9,15 @@ const getAllProducts=async(req,res)=>{
         res.status(400).send(error)
     }
 }
-
+const getAllProductsByCategory=async(req,res)=>{
+    try {
+            let products=await Product.find({category:req.params.idCategory})
+            res.status(200).json(products)
+    }
+    catch (error) {
+            res.status(400).send(error)
+    }
+}
 //add product
 const addProduct=async(req,res)=>{
     try {
@@ -52,4 +60,4 @@ const updateProduct=async(req,res)=>{
     }
 }
 
-module.exports={addProduct,deleteProductById,getProductById,updateProduct,getAllProducts}
+module.exports={addProduct,deleteProductById,getProductById,updateProduct,getAllProducts,getAllProductsByCategory}

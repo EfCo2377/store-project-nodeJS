@@ -8,6 +8,8 @@ router.get('/getAllProducts',productsFunctions.getAllProducts)
 router.get('/getProductById/:idProduct',productsFunctions.getProductById)
 router.get('/getAllCategories',categoriesFunctions.getAllCategories)
 router.get('/login/:userName/:password',userFunctions.login)
+router.get('/getProducstByCategory/:idCategory',productsFunctions.getAllProductsByCategory)
+
 
 //post
 router.post('/addProduct',productsFunctions.addProduct)
