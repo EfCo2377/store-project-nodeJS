@@ -2,12 +2,12 @@ const Product=require('../models/Product')
 
 //get all products
 const getAllProducts=async(req,res)=>{
-    es.status(400).send(error)
-    }let products=await Product.find()
+    let products=await Product.find()
     try {
         res.status(200).json(products)
     } catch (error) {
-        r
+        res.status(400).send(error)
+    }
 }
 
 //add product
@@ -52,4 +52,4 @@ const updateProduct=async(req,res)=>{
     }
 }
 
-module.exports={getAllProducts,addProduct,deleteProductById,getProductById,updateProduct}
+module.exports={addProduct,deleteProductById,getProductById,updateProduct,getAllProducts}

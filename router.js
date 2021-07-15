@@ -12,6 +12,7 @@ router.get('/getAllCategories',categoriesFunctions.getAllCategories)
 router.post('/addProduct',productsFunctions.addProduct)
 router.post('/createUser',userFunctions.createUser)
 router.post('/login',userFunctions.login)
+router.post('/addCategory',categoriesFunctions.addCategory)
 
 
 //put
