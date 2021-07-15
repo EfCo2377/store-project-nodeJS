@@ -22,7 +22,7 @@ const createUser=async(req,res)=>{
 //login
 const login=async(req,res)=>{
     try {
-        let user=await User.findOne({userName:req.body.userName,password:req.body.password})
+        let user=await User.findOne({userName:req.params.userName,password:req.params.password})
         if(user){
             res.status(200).json(user)
         }

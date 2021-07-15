@@ -7,11 +7,11 @@ const categoriesFunctions=require('./controlers/Categoties')
 router.get('/getAllProducts',productsFunctions.getAllProducts)
 router.get('/getProductById/:idProduct',productsFunctions.getProductById)
 router.get('/getAllCategories',categoriesFunctions.getAllCategories)
+router.get('/login/:userName/:password',userFunctions.login)
 
 //post
 router.post('/addProduct',productsFunctions.addProduct)
 router.post('/createUser',userFunctions.createUser)
-router.post('/login',userFunctions.login)
 router.post('/addCategory',categoriesFunctions.addCategory)
 
 
