@@ -1,10 +1,12 @@
 const router=require('express').Router()
 const productsFunctions=require('./controlers/Product')
 const userFunctions=require('./controlers/User')
+const categoriesFunctions=require('./controlers/Categoties')
 
 //get
 router.get('/getAllProducts',productsFunctions.getAllProducts)
 router.get('/getProductById/:idProduct',productsFunctions.getProductById)
+router.get('/getAllCategories',categoriesFunctions.getAllCategories)
 
 //post
 router.post('/addProduct',productsFunctions.addProduct)

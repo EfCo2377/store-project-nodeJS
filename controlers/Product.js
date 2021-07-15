@@ -2,12 +2,12 @@ const Product=require('../models/Product')
 
 //get all products
 const getAllProducts=async(req,res)=>{
-    let products=await Product.find()
+    es.status(400).send(error)
+    }let products=await Product.find()
     try {
         res.status(200).json(products)
     } catch (error) {
-        res.status(400).send(error)
-    }
+        r
 }
 
 //add product
